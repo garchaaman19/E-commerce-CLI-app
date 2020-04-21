@@ -5,7 +5,7 @@ An ecommerce CLI where admin will be able to add products &amp; user will be abl
 
 # Installation
 
-pip install --editable .
+pip install --editable .(dot)
 
 # Usage
 
