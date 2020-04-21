@@ -104,6 +104,7 @@ def add_products(adminpassword):
 @cli.command()
 @click.password_option('--adminpassword',confirmation_prompt=False,type=int,required=True)
 def add_coupons(adminpassword):
+            """Add coupons by admin """
             conn = create_db()
             cur = conn.cursor()
             cur.execute("SELECT password from ADMIN")
