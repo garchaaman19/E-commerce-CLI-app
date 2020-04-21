@@ -9,15 +9,15 @@ pip install --editable .
 
 #Usage
 
-   __  ___                                     __ 
+   **__  ___                                     __ 
    /  |/  /  __  __   _____   ____ _   _____   / /_
   / /|_/ /  / / / /  / ___/  / __ `/  / ___/  / __/
  / /  / /  / /_/ /  / /__   / /_/ /  / /     / /_  
 /_/  /_/   \__, /   \___/   \__,_/  /_/      \__/  
-          /____/                                 
+          /____/**                                 
 
 
-Usage: mycart.py [OPTIONS] COMMAND1 [ARGS]... [COMMAND2 [ARGS]...]...
+``Usage: mycart.py [OPTIONS] COMMAND1 [ARGS]... [COMMAND2 [ARGS]...]...
 
 OR
 
@@ -39,3 +39,4 @@ Commands:
   view-categories    View list of all categories of products
   view-coupons       View list of all Coupons
   view-product       View product details
+``
