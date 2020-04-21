@@ -43,13 +43,16 @@ Commands:
 
 
 # Instructions
-1. You can either run file with mycart.py or with command mycart(Running command directly does not work on some distributions)
+1. You need to first install file with pip install --editable .
 
-2- You need to first register admin with command 'set-admin'
+2. You can either run file with mycart.py or with command mycart(Running command directly does not work on some distributions)
 
-3. You need to pass command for each operation 
+3- You need to first register admin with command 'set-admin'
+
+4. You need to pass command for each operation 
     ex:- mycart.py set-admin
     ex:- mycart.py add-categories
     
+  
     
 `
