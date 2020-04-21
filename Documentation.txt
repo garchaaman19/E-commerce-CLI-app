@@ -23,7 +23,6 @@ OR
 
 Usage: mycart [OPTIONS] COMMAND1 [ARGS]... [COMMAND2 [ARGS]...]...
 
-
 ~~Options:
   --help  Show this message and exit.
 
