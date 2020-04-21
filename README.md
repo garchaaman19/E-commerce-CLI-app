@@ -12,9 +12,9 @@ pip install --editable .(dot)
         
 
 
-``Usage: mycart.py [OPTIONS] COMMAND1 [ARGS]... [COMMAND2 [ARGS]...]...
+``Usage: mycart.py [OPTIONS]
 
 OR
 
-Usage: mycart [OPTIONS] COMMAND1 [ARGS]... [COMMAND2 [ARGS]...]...
+Usage: mycart [OPTIONS]
 
