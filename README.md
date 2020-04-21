@@ -3,15 +3,24 @@ An ecommerce CLI where admin will be able to add products &amp; user will be abl
 
 
 
-#Installation
+# Installation
 
 pip install --editable .
 
 #Usage
 
+   __  ___                                     __ 
+   /  |/  /  __  __   _____   ____ _   _____   / /_
+  / /|_/ /  / / / /  / ___/  / __ `/  / ___/  / __/
+ / /  / /  / /_/ /  / /__   / /_/ /  / /     / /_  
+/_/  /_/   \__, /   \___/   \__,_/  /_/      \__/  
+          /____/                                 
+
 
 Usage: mycart.py [OPTIONS] COMMAND1 [ARGS]... [COMMAND2 [ARGS]...]...
+
 OR
+
 Usage: mycart [OPTIONS] COMMAND1 [ARGS]... [COMMAND2 [ARGS]...]...
 
 Options:
@@ -19,7 +28,7 @@ Options:
 
 Commands:
   add-categories     Add Categories
-  add-coupons
+  add-coupons        Add coupons by admin
   add-my-cart        Add products to your cart
   add-products       Add Products to the categories
   checkout           Buy all products from cart apply coupon if any and...
