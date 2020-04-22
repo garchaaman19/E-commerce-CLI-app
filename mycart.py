@@ -154,7 +154,7 @@ def view_product():
     conn = create_db()
     cur=conn.cursor()
     cur.execute("SELECT product_name FROM PRODUCTS")
-    product=cur.fetchone()[0]
+    product=cur.fetchone()
     if product:
         product_name = click.prompt('enter the product name to view details', type=str)
         print('\n')
@@ -169,7 +169,7 @@ def view_coupons():
     conn = create_db()
     cur=conn.cursor()
     cur.execute("SELECT coupon_code,end_date,discount,type_of_usage FROM COUPONS")
-    coupons=cur.fetchone()[0]
+    coupons=cur.fetchone()
     if coupons:
         print(pd.read_sql_query("SELECT coupon_code,end_date,discount,type_of_usage FROM COUPONS", conn))
     else:
