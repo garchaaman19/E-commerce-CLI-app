@@ -40,7 +40,7 @@ def register():
 
 
 @cli.command()
-@click.password_option('--adminpassword',confirmation_prompt=False,type=int,required=True)
+@click.password_option('--adminpassword',confirmation_prompt=False,required=True)
 def add_categories(adminpassword):
     """Add Categories"""
     conn = create_db()
@@ -65,7 +65,7 @@ def add_categories(adminpassword):
 
 
 @cli.command()
-@click.password_option('--adminpassword',confirmation_prompt=False,type=int,required=True)
+@click.password_option('--adminpassword',confirmation_prompt=Fals,required=True)
 def add_products(adminpassword):
     """Add Products to the categories"""
     conn = create_db()
@@ -102,7 +102,7 @@ def add_products(adminpassword):
 
 
 @cli.command()
-@click.password_option('--adminpassword',confirmation_prompt=False,type=int,required=True)
+@click.password_option('--adminpassword',confirmation_prompt=False,required=True)
 def add_coupons(adminpassword):
             """Add coupons by admin """
             conn = create_db()
