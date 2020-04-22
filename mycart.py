@@ -65,7 +65,7 @@ def add_categories(adminpassword):
 
 
 @cli.command()
-@click.password_option('--adminpassword',confirmation_prompt=Fals,required=True)
+@click.password_option('--adminpassword',confirmation_prompt=False,required=True)
 def add_products(adminpassword):
     """Add Products to the categories"""
     conn = create_db()
