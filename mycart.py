@@ -140,7 +140,7 @@ def view_all_products():
     conn = create_db()
     cur = conn.cursor()
     cur.execute("SELECT product_name FROM PRODUCTS")
-    products = cur.fetchone()[0]
+    products = cur.fetchone()
     if products:
         print(pd.read_sql_query("SELECT product_name,description,amount FROM PRODUCTS", conn))
     else:
