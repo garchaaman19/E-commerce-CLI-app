@@ -53,6 +53,8 @@ Commands:
     ex:- mycart.py set-admin
     ex:- mycart.py add-categories
     
+5. You need to add categories first then products and coupons so that users can view it.
+    
  
     
 `
