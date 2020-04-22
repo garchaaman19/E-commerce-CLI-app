@@ -47,7 +47,7 @@ def add_categories(adminpassword):
     cur = conn.cursor()
     cur.execute("SELECT password from ADMIN")
     password = cur.fetchone()
-    if adminpassword is not None and adminpassword == password[0]:
+    if password  and adminpassword == password[0]:
         name = click.prompt('Please enter type of categories you want', type=str)
         name=name.lower()
         id = random.randint(1, 100000)
@@ -72,7 +72,7 @@ def add_products(adminpassword):
     cur = conn.cursor()
     cur.execute("SELECT password from ADMIN")
     password = cur.fetchone()
-    if adminpassword and adminpassword == password[0]:
+    if password and adminpassword == password[0]:
         name = click.prompt('Please enter product name', type=str)
         description=click.prompt('Please enter product description',type=str)
         amount = click.prompt('Please enter product amount', type=int)
@@ -109,7 +109,7 @@ def add_coupons(adminpassword):
             cur = conn.cursor()
             cur.execute("SELECT password from ADMIN")
             password=cur.fetchone()
-            if adminpassword and password[0]:
+            if password and password[0]==adminpassword:
                 coupon_code=click.prompt('Please enter coupon code', type=str)
                 end_date=click.prompt('Please enter end date in yyyy-mm-dd format only ', type=str)
                 discount=click.prompt('Please enter discount', type=int)
