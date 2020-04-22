@@ -47,7 +47,7 @@ def add_categories(adminpassword):
     cur = conn.cursor()
     cur.execute("SELECT password from ADMIN")
     password = cur.fetchone()
-    if adminpassword == int(password[0]):
+    if adminpassword is not None and adminpassword == password[0]:
         name = click.prompt('Please enter type of categories you want', type=str)
         name=name.lower()
         id = random.randint(1, 100000)
@@ -72,7 +72,7 @@ def add_products(adminpassword):
     cur = conn.cursor()
     cur.execute("SELECT password from ADMIN")
     password = cur.fetchone()
-    if adminpassword == int(password[0]):
+    if adminpassword and adminpassword == password[0]:
         name = click.prompt('Please enter product name', type=str)
         description=click.prompt('Please enter product description',type=str)
         amount = click.prompt('Please enter product amount', type=int)
@@ -86,8 +86,8 @@ def add_products(adminpassword):
             id = random.randint(1, 100000)
             conn.execute("INSERT INTO PRODUCTS VALUES (?,?,?,?,?)", (id,name,description,amount,int(category_id)))
             conn.commit()
-            flag = click.prompt('do you want to continue', type=str)
-            if flag == 'yes':
+            flag = click.prompt('do you want to continue yes/no', type=str)
+            if flag.lower() == 'yes':
                 cli()
             else:
                 click.echo('Categories added successfully')
@@ -109,7 +109,7 @@ def add_coupons(adminpassword):
             cur = conn.cursor()
             cur.execute("SELECT password from ADMIN")
             password=cur.fetchone()
-            if adminpassword==int(password[0]):
+            if adminpassword and password[0]:
                 coupon_code=click.prompt('Please enter coupon code', type=str)
                 end_date=click.prompt('Please enter end date in yyyy-mm-dd format only ', type=str)
                 discount=click.prompt('Please enter discount', type=int)
@@ -117,8 +117,8 @@ def add_coupons(adminpassword):
                 id=random.randint(1,10000000)
                 conn.execute("INSERT INTO COUPONS VALUES(?,?,?,?,?)",(id,coupon_code,end_date,discount,type_of_usage))
                 conn.commit()
-                flag = click.prompt('do you want to continue', type=str)
-                if flag == 'yes':
+                flag = click.prompt('do you want to continue yes/no', type=str)
+                if flag.lower() == 'yes':
                     cli()
                 else:
                     click.echo('Coupons added successfully')
